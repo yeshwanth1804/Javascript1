@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4 Columns with Image and Button</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      transition: background 0.4s ease;
+    }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+    .column {
+      flex: 1;
+      max-width: 220px;
+      padding: 16px;
+      text-align: center;
+    }
+    .column img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .change-bg-btn {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .change-bg-btn:hover {
+      background-color: #217dbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+      <img src="https://picsum.photos/220/120?1" alt="Image 1">
+      <button class="change-bg-btn" onclick="changeBg('#ffe4e1')">Change Background</button>
+    </div>
+    <div class="column">
+      <img src="https://picsum.photos/220/120?2" alt="Image 2">
+      <button class="change-bg-btn" onclick="changeBg('#e0ffff')">Change Background</button>
+    </div>
+    <div class="column">
+      <img src="https://picsum.photos/220/120?3" alt="Image 3">
+      <button class="change-bg-btn" onclick="changeBg('#fafad2')">Change Background</button>
+    </div>
+    <div class="column">
+      <img src="https://picsum.photos/220/120?4" alt="Image 4">
+      <button class="change-bg-btn" onclick="changeBg('#d1e7dd')">Change Background</button>
+    </div>
+  </div>
+  <script>
+    function changeBg(color) {
+      document.body.style.background = color;
+    }
+  </script>
+</body>
+</html>
